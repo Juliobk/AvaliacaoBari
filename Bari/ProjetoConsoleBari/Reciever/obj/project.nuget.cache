@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "mj/FF5KPYrTHqIa4W1JcwokdOQO0O6q7CPOYomuTfgfzsx45A3Bx5rR8/tP/N74AzRApxobtAn8YApW1xOJTgQ==",
+  "success": true,
+  "projectFilePath": "D:\\Julio\\ProjetoBari\\ProjetoBari\\ProjetoConsoleBari\\Reciever\\Receiver.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Julio Back\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\Julio Back\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Julio Back\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
