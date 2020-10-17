@@ -13,7 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Sender.Services;
+using Services;
 
 namespace Sender
 {
@@ -34,7 +34,7 @@ namespace Sender
                 collection.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
                 {
                     cfg.UseHealthCheck(provider);
-                    cfg.Host("rabbitmq://localhost:15672", settings =>
+                    cfg.Host("rabbitmq://localhost/", settings =>
                     {
                         settings.Username("testes");
                         settings.Password("userBari");
@@ -45,6 +45,11 @@ namespace Sender
             services.AddTransient<IMessageService, MessageService>();
             services.AddSingleton<IHostedService, APISender>();
 
+            services.AddDistributedMemoryCache();
+            services.AddSession(options => {
+               options.IdleTimeout = TimeSpan.FromMinutes(15);//You can set Time   
+           });
+
             services.AddMassTransitHostedService();
             services.AddControllers();
             
@@ -54,12 +59,11 @@ namespace Sender
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
+            app.UseSession();
             app.Use((context, next) =>
             {
                 var url = context.Request.GetDisplayUrl().Replace("weatherforecast", "");
-                MessageService messageService = new MessageService();
-                messageService.SendMessage("1", "texto", url);
+                context.Session.SetString("URL", url);
                 return next.Invoke();
             });
 

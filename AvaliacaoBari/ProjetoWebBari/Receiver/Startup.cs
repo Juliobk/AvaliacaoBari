@@ -13,7 +13,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Receiver.Model;
+using Models;
+using Services;
 
 namespace Receiver
 {
@@ -35,7 +36,7 @@ namespace Receiver
                 x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
                 {
                     cfg.UseHealthCheck(provider);
-                    cfg.Host("rabbitmq://localhost:15672", settings => {
+                    cfg.Host("rabbitmq://localhost/", settings => {
                         settings.Username("testes");
                         settings.Password("userBari");
                     });
@@ -43,19 +44,33 @@ namespace Receiver
                     {
                         ep.PrefetchCount = 16;
                         ep.UseMessageRetry(r => r.Interval(2, 100));
-                        ep.ConfigureConsumer<MessageConsumer>(provider);
+                        ep.Consumer<MessageConsumer>(provider);
                     });
                 }));
 
+
             });
+            services.AddTransient<IMessageService, MessageService>();
             services.AddMassTransitHostedService();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(15);//You can set Time   
+            });
+            services.AddControllersWithViews()
+                .AddSessionStateTempDataProvider();
+            services.AddRazorPages()
+                .AddSessionStateTempDataProvider();
+
+            services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            
+            app.UseSession();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

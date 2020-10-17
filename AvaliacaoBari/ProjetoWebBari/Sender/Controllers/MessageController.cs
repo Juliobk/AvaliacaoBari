@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Sender.Model;
-using Sender.Services;
+using Models;
+using Services;
 
 namespace Sender.Controllers
 {
@@ -15,22 +15,27 @@ namespace Sender.Controllers
     public class MessageController : ControllerBase
     {
         readonly IBusControl _bus;
-        readonly IMessageService _messageService;
-        public MessageController(IBusControl bus, IMessageService messageService)
+        readonly IPublishEndpoint _publishEndpoint;
+        public MessageController(IBusControl bus, IPublishEndpoint publishEndpoint)
         {
             _bus = bus;
-            _messageService = messageService;
+            _publishEndpoint = publishEndpoint;
         }
 
         [HttpPost]
         public async Task<ActionResult> CreateMessage(Message message)
         {
-            Uri uri = new Uri("rabbitmq://localhost:15672/message-queue");
- //           Task<ISendEndpoint> sendEndpointTask = _bus.GetSendEndpoint(uri);
- //           ISendEndpoint sendEndpoint = sendEndpointTask.Result;
- //           Task sendTask = sendEndpoint.Send<Message>(message);
-            var endpoint = await _bus.GetSendEndpoint(uri);
-            await endpoint.Send(message);
+            Uri uri = new Uri("queue:message-queue");
+            try
+            {
+                  ISendEndpoint sendEndpointTask = await _bus.GetSendEndpoint(uri);
+                  await sendEndpointTask.Send<Message>(message);
+               // await _publishEndpoint.Publish<Message>(message);
+            }
+            catch(Exception ex)
+            {
+
+            }
             return Ok("Sucess");
         }
     }

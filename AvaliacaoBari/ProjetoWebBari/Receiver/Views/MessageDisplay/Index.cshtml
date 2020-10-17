@@ -1,0 +1,8 @@
+﻿@page
+@{
+
+}
+<script type="text/javascript">
+    var idIntervalo = window.setInterval(function () { location.reload(); }, 5000);
+</script>
+<label>@TempData.Peek("Message").ToString()</label>
