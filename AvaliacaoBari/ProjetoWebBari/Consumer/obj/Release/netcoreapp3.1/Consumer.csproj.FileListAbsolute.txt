@@ -1,0 +1,9 @@
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\bin\Release\netcoreapp3.1\Consumer.deps.json
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\bin\Release\netcoreapp3.1\Consumer.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\bin\Release\netcoreapp3.1\Consumer.pdb
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Release\netcoreapp3.1\Consumer.csprojAssemblyReference.cache
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Release\netcoreapp3.1\Consumer.AssemblyInfoInputs.cache
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Release\netcoreapp3.1\Consumer.AssemblyInfo.cs
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Release\netcoreapp3.1\Consumer.csproj.CoreCompileInputs.cache
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Release\netcoreapp3.1\Consumer.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Release\netcoreapp3.1\Consumer.pdb

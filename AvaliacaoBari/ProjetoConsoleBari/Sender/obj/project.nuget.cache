@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XKYbl7Sz2igSG7Im1xB9Eb9YSitKVq+jMgk+yDol3K3pi5WVoZ0grPII4AqTEU1vBSFzpFPgiQ4Qjy9hz+YyMg==",
+  "dgSpecHash": "nrb83ICQMLjaCoR5+ti0xx9s3/0+ifb8vsJyO5gSpA6FFUfRQ+g2lpnQYVk6wRqB5uHz9X7xIgo0gyPAjIEAxg==",
   "success": true,
-  "projectFilePath": "D:\\Julio\\ProjetoBari\\ProjetoBari\\ProjetoConsoleBari\\Sender\\Sender.csproj",
+  "projectFilePath": "D:\\Julio\\AvaliacaoBari\\AvaliacaoBari\\AvaliacaoBari\\ProjetoConsoleBari\\Sender\\Sender.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Julio Back\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\Julio Back\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

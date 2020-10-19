@@ -1,14 +1,55 @@
 version: '3'
 
 services:
-  broker-local:
+  rabbitmq:
     image: rabbitmq:3-management-alpine
+    hostname: my-rabbit
+    container_name: rabbitmq
     environment:
-      RABBITMQ_DEFAULT_USER: "testes"
-      RABBITMQ_DEFAULT_PASS: "userBari"
+      RABBITMQ_DEFAULT_USER: "userbari"
+      RABBITMQ_DEFAULT_PASS: "userbari"
     ports:
       - "5672:5672"
       - "15672:15672"
+    expose:
+      - 5672
+      - 15672
+    networks:
+      - mensageria
+
+  projetobari1:
+    image: imagemprojetobari
+    container_name: projetobari1
+    ports:
+      - "44381:44381"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=projetobari
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - RABBIT_HOSTNAME=rabbitmq
+    volumes:
+      - D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\https\aspnetapp.pfx:/https/aspnetapp.pfx
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+    networks:
+      - mensageria
+      
+  projetobari2:
+    image: imagemprojetobari
+    container_name: projetobari2
+    ports:
+      - "5000:44381"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=projetobari
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - RABBIT_HOSTNAME=rabbitmq
+    volumes:
+      - .\Sender\https\aspnetapp.pfx:/https/aspnetapp.pfx
+    restart: on-failure
+    depends_on:
+      - rabbitmq
     networks:
       - mensageria
 

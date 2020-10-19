@@ -116,11 +116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Julio\\ProjetoBari\\ProjetoBari\\ProjetoConsoleBari\\Sender\\Sender.csproj",
+      "projectUniqueName": "D:\\Julio\\AvaliacaoBari\\AvaliacaoBari\\AvaliacaoBari\\ProjetoConsoleBari\\Sender\\Sender.csproj",
       "projectName": "Sender",
-      "projectPath": "D:\\Julio\\ProjetoBari\\ProjetoBari\\ProjetoConsoleBari\\Sender\\Sender.csproj",
+      "projectPath": "D:\\Julio\\AvaliacaoBari\\AvaliacaoBari\\AvaliacaoBari\\ProjetoConsoleBari\\Sender\\Sender.csproj",
       "packagesPath": "C:\\Users\\Julio Back\\.nuget\\packages\\",
-      "outputPath": "D:\\Julio\\ProjetoBari\\ProjetoBari\\ProjetoConsoleBari\\Sender\\obj\\",
+      "outputPath": "D:\\Julio\\AvaliacaoBari\\AvaliacaoBari\\AvaliacaoBari\\ProjetoConsoleBari\\Sender\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -1,29 +1,21 @@
-# AvaliacaoBari
-Avaliação Banco Bari
+# AvaliacaoBari  
+Avaliação Banco Bari  
 
-# Configurações Necessárias #
- Visual Studio ou outra IDE de preferência
- .Net Core 3.1 ou mais
- Docker
+#Sobre o Projeto
+O projeto consiste em um serviço que envia e recebe mensagens através do sistema de mensagens "rabbitmq"  
+O projeto deve ser rodado através do docker, que irá criar três containers, sendo um para o rabbitmq e duas instâncias do serviço do projeto.
 
-# Para executar #
-#Passo 1
- Abrir console na pasta pasta do projeto 
- Ao executar pela primeira vez rodar Docker com o comando: 
- docker-compose up -d
- O comando acima faz com que o ambiente esteja rodando o RabbitMq de forma correta
- Caso esteja executando o serviço pela segunda vez rodar no console o comando:
- docker container ps -a
+# Configurações Necessárias    
+.Net Core 3.1
+Docker  
 
-# Passo 2
- Caso o status da imagem criada não esteja rodando, deve-se copiar o ID da imagem e rodar o seguinte comando
- docker start id_imagem
+# Para executar   
+## Passo 1  
+Abrir console na pasta pasta do projeto e rodar o comando abaixo para criar a imagem do projeto  
+docker build -f Sender/Dockerfile -t imagemprojetobari . 
+Em seguida rodar o comando abaixo:
+docker-compose up -d  
 
-# Passo 3
- Abrir Solução no Visual Studio
-
-# Passo 4
- Executar solução
 
 
 
