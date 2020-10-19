@@ -1,2 +1,0 @@
-# AvaliacaoBari
-Avaliação Banco Bari
