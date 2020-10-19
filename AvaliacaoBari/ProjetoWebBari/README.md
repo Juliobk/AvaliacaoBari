@@ -10,9 +10,9 @@ O projeto deve ser rodado através do docker, que irá criar três containers, s
 Docker  
 
 # Para executar   
-Abrir console na pasta pasta do projeto e rodar o comando abaixo para criar a imagem do projeto  
-docker build -f Sender/Dockerfile -t imagemprojetobari . 
-Em seguida rodar o comando abaixo:
+Abrir console na pasta pasta do projeto e rodar o comando abaixo para criar a imagem do projeto   
+docker build -f Sender/Dockerfile -t imagemprojetobari .  
+Em seguida rodar o comando abaixo:  
 docker-compose up -d  
 
 
