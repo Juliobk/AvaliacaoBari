@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Consumer;
+using Consumer.Services;
+using GreenPipes;
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,20 +34,33 @@ namespace Sender
         {
             services.AddMassTransit(collection =>
             {
+                collection.AddConsumer<MessageConsumer>();
+                Console.WriteLine("Vai configurar");
                 collection.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
                 {
-                    cfg.UseHealthCheck(provider);
-                    cfg.Host("rabbitmq://localhost/", settings =>
+                    var rabbitHostName = Environment.GetEnvironmentVariable("RABBIT_HOSTNAME");
+                    if (string.IsNullOrEmpty(rabbitHostName))
                     {
-                        settings.Username("testes");
-                        settings.Password("userBari");
+                        rabbitHostName = "localhost";
+                    }
+                    cfg.UseHealthCheck(provider);
+                    cfg.Host(new Uri(@"rabbitmq://"+ rabbitHostName +"/"), settings =>
+                    {
+                        settings.Username("userbari");
+                        settings.Password("userbari");
+                    });
+                    cfg.ReceiveEndpoint("message-queue", ep =>
+                    {
+                        ep.PrefetchCount = 16;
+                        ep.UseMessageRetry(r => r.Interval(2, 100));
+                        ep.Consumer<MessageConsumer>(provider);
                     });
                 }));
 
             });
             services.AddTransient<IMessageService, MessageService>();
             services.AddSingleton<IHostedService, APISender>();
-
+            Console.WriteLine("Configurou");
             services.AddDistributedMemoryCache();
             services.AddSession(options => {
                options.IdleTimeout = TimeSpan.FromMinutes(15);//You can set Time   

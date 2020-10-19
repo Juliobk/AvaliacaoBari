@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Sender/1.0.0": {
         "dependencies": {
+          "Consumer": "1.0.0",
           "MassTransit": "7.0.4",
           "MassTransit.AspNetCore": "7.0.4",
           "MassTransit.RabbitMQ": "7.0.4",
@@ -1572,6 +1573,18 @@
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.1"
+        }
+      },
+      "Consumer/1.0.0": {
+        "dependencies": {
+          "MassTransit": "7.0.4",
+          "RestSharp": "106.11.7"
+        },
+        "runtime": {
+          "Consumer.dll": {}
+        },
+        "compile": {
+          "Consumer.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4098,6 +4111,11 @@
       "sha512": "sha512-7BqrS/a0I5f6lxVV5duBnm4QIaQAYM1IgXv5Bz5m7/16zgsL3fPxRtVMRMLdyrdAT0iVI35IpRmP2n+BAZtUYA==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Consumer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

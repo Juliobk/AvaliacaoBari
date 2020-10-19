@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Consumer;
+using Consumer.Services;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
@@ -25,7 +27,8 @@ namespace Services
             {
                 string timeStamp = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
                 string IDRequisition = Guid.NewGuid().ToString().Substring(1, 7);
-                await _messageService.SendMessage(IDRequisition, " TimeStamp: "+ timeStamp + " ID Requisicao: " + IDRequisition + " ID Serviço: "+ idServico, "https://localhost:44381/");
+                Console.WriteLine("Serviço " + idServico + " enviou a mensagem " + IDRequisition);
+                await _messageService.SendMessage(new Message() { ID = IDRequisition, Text = " TimeStamp: " + timeStamp + " ID Requisicao: " + IDRequisition + " ID Serviço: " + idServico });
                 await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken); //Run every 5 seconds
             }
         }
