@@ -28,7 +28,7 @@ services:
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
       - RABBIT_HOSTNAME=rabbitmq
     volumes:
-      - D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\https\aspnetapp.pfx:/https/aspnetapp.pfx
+      - .\Sender\https\aspnetapp.pfx:/https/aspnetapp.pfx
     restart: on-failure
     depends_on:
       - rabbitmq
