@@ -35,7 +35,6 @@ namespace Sender
             services.AddMassTransit(collection =>
             {
                 collection.AddConsumer<MessageConsumer>();
-                Console.WriteLine("Vai configurar");
                 collection.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
                 {
                     var rabbitHostName = Environment.GetEnvironmentVariable("RABBIT_HOSTNAME");
@@ -60,7 +59,6 @@ namespace Sender
             });
             services.AddTransient<IMessageService, MessageService>();
             services.AddSingleton<IHostedService, APISender>();
-            Console.WriteLine("Configurou");
             services.AddDistributedMemoryCache();
             services.AddSession(options => {
                options.IdleTimeout = TimeSpan.FromMinutes(15);//You can set Time   
