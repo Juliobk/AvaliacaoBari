@@ -80,8 +80,6 @@ D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\bin\Deb
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.csprojAssemblyReference.cache
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.AssemblyInfoInputs.cache
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.AssemblyInfo.cs
-D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.csproj.CoreCompileInputs.cache
-D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.MvcApplicationPartsAssemblyInfo.cache
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.RazorTargetAssemblyInfo.cache
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.csproj.CopyComplete
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\staticwebassets\Sender.StaticWebAssets.Manifest.cache
@@ -89,3 +87,10 @@ D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Deb
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.dll
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.pdb
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.genruntimeconfig.cache
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\bin\Debug\netcoreapp3.1\xunit.core.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.csproj.CoreCompileInputs.cache
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Sender\obj\Debug\netcoreapp3.1\Sender.MvcApplicationPartsAssemblyInfo.cache

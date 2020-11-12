@@ -4,6 +4,9 @@ D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\bin\D
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Debug\netcoreapp3.1\Consumer.csprojAssemblyReference.cache
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Debug\netcoreapp3.1\Consumer.AssemblyInfoInputs.cache
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Debug\netcoreapp3.1\Consumer.AssemblyInfo.cs
-D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Debug\netcoreapp3.1\Consumer.csproj.CoreCompileInputs.cache
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Debug\netcoreapp3.1\Consumer.dll
 D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Debug\netcoreapp3.1\Consumer.pdb
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+D:\Julio\AvaliacaoBari\AvaliacaoBari\AvaliacaoBari\ProjetoWebBari\Consumer\obj\Debug\netcoreapp3.1\Consumer.csproj.CoreCompileInputs.cache

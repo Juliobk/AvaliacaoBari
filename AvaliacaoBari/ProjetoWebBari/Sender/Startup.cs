@@ -60,9 +60,7 @@ namespace Sender
             services.AddTransient<IMessageService, MessageService>();
             services.AddSingleton<IHostedService, APISender>();
             services.AddDistributedMemoryCache();
-            services.AddSession(options => {
-               options.IdleTimeout = TimeSpan.FromMinutes(15);//You can set Time   
-           });
+
 
             services.AddMassTransitHostedService();
             services.AddControllers();
@@ -73,11 +71,9 @@ namespace Sender
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseSession();
+
             app.Use((context, next) =>
             {
-                var url = context.Request.GetDisplayUrl().Replace("weatherforecast", "");
-                context.Session.SetString("URL", url);
                 return next.Invoke();
             });
 
