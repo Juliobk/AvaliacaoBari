@@ -1,6 +1,5 @@
 ﻿using MassTransit;
 using Newtonsoft.Json.Linq;
-using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
